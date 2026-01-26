@@ -22,6 +22,17 @@ Before you point your domain here:
 2. Confirm the support email address (currently `support@blips.news`) in:
    - `index.html`, `privacy.html`, `terms.html`, `support.html`
 
+This repo currently uses:
+
+- Domain: `https://husniconsulting.ca`
+- Support email: `info@husniconsulting.ca`
+- Owner: Husni Consulting Inc.
+
+## App screenshot
+
+The homepage includes an illustrated app preview at `assets/app-mock.svg`.
+If you provide real screenshots, we can replace it with a PNG/WebP and update the `<img>` tag.
+
 ## Run locally
 
 From this repo root:

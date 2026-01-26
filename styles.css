@@ -118,6 +118,21 @@ textarea:focus-visible {
   gap: 16px;
 }
 
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    gap: 8px;
+  }
+
+  .nav a {
+    padding: 8px 8px;
+  }
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -162,6 +177,16 @@ textarea:focus-visible {
 
 .hero {
   padding: 44px 0 14px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 28px 0 10px;
+  }
+
+  .hero-card {
+    padding: 20px;
+  }
 }
 
 .hero-grid {
@@ -314,6 +339,27 @@ h1 {
 .feature p {
   margin: 0;
   color: var(--muted);
+}
+
+.preview {
+  padding-top: 10px;
+}
+
+.screenshot {
+  padding: 14px;
+}
+
+.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+}
+
+.screenshot figcaption {
+  margin-top: 10px;
 }
 
 .pill {

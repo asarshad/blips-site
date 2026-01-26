@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0b1020" />
+    <meta name="theme-color" content="#0F172A" />
+    <link rel="icon" href="./assets/app-icon.png" type="image/png" />
 
     <title>Terms of Service — Blips</title>
     <meta name="description" content="Terms of Service for the Blips app and website." />
@@ -16,13 +17,13 @@
     <header class="header" role="banner">
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="Blips home">
-          <span class="logo" aria-hidden="true"></span>
+          <img class="logo" src="./assets/app-icon.png" alt="" width="36" height="36" />
           <span class="brand-title">Blips</span>
         </a>
         <nav class="nav" aria-label="Primary">
+          <a href="./index.html">Home</a>
           <a href="./privacy.html">Privacy</a>
           <a href="./support.html">Support</a>
-          <a href="./index.html#features">Features</a>
         </nav>
       </div>
     </header>
@@ -88,17 +89,27 @@
     </main>
 
     <footer class="footer" role="contentinfo">
-      <div class="container footer-grid">
-        <div>
-          <strong>Blips</strong>
-          <div class="muted">A calmer way to keep up.</div>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="./assets/app-icon.png" alt="" width="28" height="28" />
+          <span>Blips</span>
         </div>
-        <div class="nav" aria-label="Footer">
+        <div class="footer-links">
           <a href="./index.html">Home</a>
           <a href="./privacy.html">Privacy</a>
           <a href="./support.html">Support</a>
+          <a href="mailto:info@husniconsulting.ca">Email</a>
+        </div>
+        <div class="footer-copy">
+          &copy; <span id="year">2025</span> Husni Consulting Inc.
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        var el = document.getElementById('year');
+        if (el) el.textContent = String(new Date().getFullYear());
+      })();
+    </script>
   </body>
 </html>

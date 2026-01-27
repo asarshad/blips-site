@@ -298,6 +298,15 @@ img {
   text-align: center;
 }
 
+.screenshot-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  object-position: top;
+}
+
 .screenshot-placeholder {
   background: var(--bg);
   border-radius: var(--radius-sm);

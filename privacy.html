@@ -35,65 +35,210 @@
       <section class="section" aria-labelledby="title">
         <div class="card prose">
           <h1 id="title">Privacy Policy</h1>
-          <p class="muted">Effective date: <strong>January 23, 2026</strong></p>
+          <p class="muted">Last updated: <strong>June 14, 2025</strong></p>
 
           <p>
-            Blips (“we”, “us”) is operated by <strong>Husni Consulting Inc.</strong> and provides a mobile news
-            feed app that surfaces articles, videos, and short reels from third‑party sources. This
-            policy explains what information we collect and how we use it.
+            Blips (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is operated by
+            <strong>Husni Consulting Inc.</strong> and provides a mobile news feed app that
+            surfaces articles, videos, and short reels from third&#8209;party sources. This policy
+            explains what information we collect, why we collect it, how long we keep it, and how
+            you can request deletion.
           </p>
 
-          <h2>Summary</h2>
+          <h2>At a glance</h2>
           <ul>
-            <li>We aim to collect as little personal data as possible.</li>
-            <li>We use data to operate the app, improve reliability, and prevent abuse.</li>
-            <li>You can request access to or deletion of your data by emailing <a href="mailto:info@husniconsulting.ca">info@husniconsulting.ca</a>.</li>
+            <li>We do <strong>not</strong> collect your name, email, phone number, or any account information.</li>
+            <li>We do <strong>not</strong> use cookies, advertising trackers, or analytics SDKs.</li>
+            <li>We do <strong>not</strong> sell, rent, or share your data with advertisers.</li>
+            <li>We identify your device using a <strong>one&#8209;way hash</strong> &mdash; we cannot recover your IP address from it.</li>
+            <li>AI chat messages are processed by third&#8209;party AI providers but are <strong>not stored</strong> on our servers.</li>
+            <li>You can delete all your data from within the app or by contacting us.</li>
           </ul>
 
-          <h2>Information we may collect</h2>
+          <h2>Age requirement</h2>
           <p>
-            Depending on features you use, we may collect:
+            Blips is intended for users aged <strong>13 and older</strong>. We do not knowingly
+            collect data from children under 13. If you believe a child under 13 has used the app,
+            please contact us and we will promptly delete any associated data.
           </p>
-          <ul>
-            <li><strong>App usage and diagnostics</strong> (e.g., crash reports, performance metrics) to improve stability.</li>
-            <li><strong>Device and technical data</strong> (e.g., OS version, app version) for troubleshooting.</li>
-            <li><strong>Account information</strong> only if you choose to create an account (e.g., email), to provide that service.</li>
-          </ul>
 
-          <h2>Content and third‑party links</h2>
+          <h2>Information we collect</h2>
+
+          <h3>Device identifier</h3>
           <p>
-            Blips links to content hosted by third parties (news sites, YouTube, etc.). When you open
-            those links, their privacy policies apply.
+            When you use Blips, we generate a <strong>hashed device identifier</strong> derived
+            from your IP address and browser/device information using a one&#8209;way SHA&#8209;256
+            hash. This identifier cannot be reversed to recover your IP address. We use it to
+            enforce usage quotas, personalize your feed, and prevent abuse. We do
+            <strong>not</strong> store your raw IP address.
           </p>
 
-          <h2>How we use information</h2>
+          <h3>Interaction events</h3>
+          <p>
+            We record how you interact with content in the app to personalize your feed. The
+            events we track are:
+          </p>
           <ul>
-            <li>Provide core app functionality and customer support.</li>
-            <li>Monitor and improve app performance and reliability.</li>
-            <li>Prevent abuse and protect the service.</li>
+            <li>Viewing an article or video for 10 or more seconds</li>
+            <li>Opening the original source link</li>
+            <li>Sharing content</li>
+            <li>Saving or bookmarking content</li>
+            <li>Starting or sending messages in an AI chat session</li>
           </ul>
+          <p>
+            Each event is stored with your hashed device identifier, the content item involved,
+            the event type, and a timestamp. We use this data to learn your topic, source, and
+            format preferences so we can show you more relevant content.
+          </p>
+
+          <h3>AI chat usage</h3>
+          <p>
+            When you use the AI chat feature to discuss an article or video, we track the number
+            of messages sent and tokens consumed per device to enforce daily usage limits. We store
+            your hashed device identifier, message count, token count, the content item discussed,
+            and a timestamp.
+          </p>
+          <p>
+            <strong>Chat messages themselves are not stored on our servers.</strong> Conversation
+            history is kept only on your device and is sent to the AI provider solely to generate
+            a response.
+          </p>
+
+          <h3>Learned preferences</h3>
+          <p>
+            Based on your interaction history, we automatically learn your preferences for topics
+            (e.g., &ldquo;AI&rdquo;, &ldquo;Security&rdquo;), content sources (e.g.,
+            &ldquo;TechCrunch&rdquo;), entities (e.g., &ldquo;OpenAI&rdquo;), and content formats
+            (articles, videos, reels). These preferences are stored as numeric weights linked to
+            your hashed device identifier. You do not explicitly set these &mdash; they are
+            inferred from your usage patterns.
+          </p>
+
+          <h3>Information we do <em>not</em> collect</h3>
+          <ul>
+            <li>Name, email address, or phone number</li>
+            <li>Location data or GPS coordinates</li>
+            <li>Contacts, photos, or other device content</li>
+            <li>Financial or payment information</li>
+            <li>Advertising identifiers (IDFA / GAID)</li>
+          </ul>
+
+          <h2>How we use your information</h2>
+          <ul>
+            <li><strong>Personalization:</strong> tailor your news feed based on learned preferences.</li>
+            <li><strong>Usage quotas:</strong> enforce daily message limits for AI chat.</li>
+            <li><strong>Abuse prevention:</strong> rate&#8209;limit requests and detect misuse.</li>
+            <li><strong>Service improvement:</strong> understand aggregate usage patterns to improve the app.</li>
+          </ul>
+
+          <h2>Third&#8209;party services</h2>
+          <p>
+            Blips uses the following third&#8209;party services to operate. We send the minimum
+            data necessary to each:
+          </p>
+
+          <table>
+            <thead>
+              <tr><th>Service</th><th>Purpose</th><th>Data shared</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mistral AI</strong></td>
+                <td>AI chat responses, content summarization</td>
+                <td>Article titles, summaries, and your chat messages (no device ID or IP)</td>
+              </tr>
+              <tr>
+                <td><strong>OpenAI</strong></td>
+                <td>Alternative AI provider (same purpose as Mistral)</td>
+                <td>Same as Mistral AI</td>
+              </tr>
+              <tr>
+                <td><strong>YouTube Data API</strong></td>
+                <td>Video metadata (duration, Shorts detection)</td>
+                <td>YouTube video IDs only</td>
+              </tr>
+              <tr>
+                <td><strong>RSS feed publishers</strong></td>
+                <td>Fetching article metadata</td>
+                <td>Standard HTTP requests to public RSS feeds (no user data)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Each third&#8209;party service is governed by its own privacy policy. We do not send
+            your device identifier, IP address, or personal data to any of these services.
+          </p>
+
+          <h2>Content and third&#8209;party links</h2>
+          <p>
+            Blips aggregates and links to content hosted by third parties (news sites, YouTube,
+            etc.). When you open those links, the third party&rsquo;s privacy policy applies. We
+            are not responsible for the privacy practices of external sites.
+          </p>
 
           <h2>Data retention</h2>
+          <p>We retain data for the following periods:</p>
+          <ul>
+            <li><strong>AI chat usage records:</strong> 90 days</li>
+            <li><strong>Interaction events:</strong> 90 days</li>
+            <li><strong>User preferences:</strong> until you request deletion</li>
+            <li><strong>Content items:</strong> managed on a rolling 45&#8209;day window</li>
+            <li><strong>Cache data (Redis):</strong> minutes to hours (ephemeral)</li>
+          </ul>
           <p>
-            We keep information only as long as necessary for the purposes described above, unless a
-            longer retention period is required by law.
+            Expired data is automatically purged by scheduled cleanup jobs.
           </p>
 
-          <h2>Your choices</h2>
+          <h2>Data deletion</h2>
+          <p>
+            You can delete all data associated with your device at any time:
+          </p>
           <ul>
-            <li><strong>Access / deletion:</strong> email <a href="mailto:info@husniconsulting.ca">info@husniconsulting.ca</a>.</li>
-            <li><strong>Opt‑out:</strong> you may disable certain permissions or uninstall the app.</li>
+            <li><strong>In the app:</strong> go to Settings and tap &ldquo;Delete My Data.&rdquo;</li>
+            <li><strong>By email:</strong> contact
+              <a href="mailto:info@husniconsulting.ca">info@husniconsulting.ca</a> with a
+              description of your request. We will respond within 30 days.</li>
           </ul>
+          <p>
+            Deletion removes your usage records, interaction events, learned preferences, and
+            device profile from our servers. Local data stored on your device (cached articles,
+            chat history) is also cleared when you use the in&#8209;app deletion option.
+          </p>
+
+          <h2>Data security</h2>
+          <p>
+            All data in transit between the app and our servers is encrypted using HTTPS/TLS.
+            Our API is protected by rate limiting, admin authentication, and CORS restrictions.
+            Device identifiers are hashed using SHA&#8209;256 before storage.
+          </p>
+
+          <h2>Your rights</h2>
+          <p>
+            Depending on your jurisdiction, you may have rights under privacy laws such as GDPR,
+            CCPA/CPRA, or PIPEDA, including:
+          </p>
+          <ul>
+            <li><strong>Access:</strong> request a copy of the data we hold about your device.</li>
+            <li><strong>Deletion:</strong> request that we delete your data (see above).</li>
+            <li><strong>Correction:</strong> request correction of inaccurate data.</li>
+            <li><strong>Portability:</strong> receive your data in a portable format.</li>
+          </ul>
+          <p>
+            To exercise these rights, contact
+            <a href="mailto:info@husniconsulting.ca">info@husniconsulting.ca</a>.
+          </p>
+
+          <h2>Changes to this policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. We will post the revised policy
+            on this page with an updated &ldquo;Last updated&rdquo; date. Continued use of the
+            app after changes constitutes acceptance of the revised policy.
+          </p>
 
           <h2>Contact</h2>
           <p>
-            Questions? Contact <a href="mailto:info@husniconsulting.ca">info@husniconsulting.ca</a>.
-          </p>
-
-          <hr />
-          <p class="muted">
-            Note: This policy is a starting point and may need adjustments based on the exact analytics,
-            authentication, and third‑party services you enable in production.
+            Questions or concerns? Contact
+            <a href="mailto:info@husniconsulting.ca">info@husniconsulting.ca</a>.
           </p>
         </div>
       </section>

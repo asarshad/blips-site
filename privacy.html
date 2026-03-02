@@ -35,7 +35,7 @@
       <section class="section" aria-labelledby="title">
         <div class="card prose">
           <h1 id="title">Privacy Policy</h1>
-          <p class="muted">Last updated: <strong>June 14, 2025</strong></p>
+          <p class="muted">Last updated: <strong>March 2, 2026</strong></p>
 
           <p>
             Blips News (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is operated by
@@ -48,9 +48,10 @@
           <h2>At a glance</h2>
           <ul>
             <li>We do <strong>not</strong> collect your name, email, phone number, or any account information.</li>
-            <li>We do <strong>not</strong> use cookies, advertising trackers, or analytics SDKs.</li>
+            <li>We do <strong>not</strong> use cookies or advertising trackers.</li>
+            <li>We use <strong>Sentry</strong> for crash and performance monitoring &mdash; no personally identifiable information is sent.</li>
             <li>We do <strong>not</strong> sell, rent, or share your data with advertisers.</li>
-            <li>We identify your device using a <strong>one&#8209;way hash</strong> &mdash; we cannot recover your IP address from it.</li>
+            <li>We identify your device using a <strong>randomly generated anonymous identifier</strong> stored only on your device &mdash; it is not linked to your IP address or any personal information.</li>
             <li>AI chat messages are processed by third&#8209;party AI providers but are <strong>not stored</strong> on our servers.</li>
             <li>You can delete all your data from within the app or by contacting us.</li>
           </ul>
@@ -66,11 +67,12 @@
 
           <h3>Device identifier</h3>
           <p>
-            When you use Blips News, we generate a <strong>hashed device identifier</strong> derived
-            from your IP address and browser/device information using a one&#8209;way SHA&#8209;256
-            hash. This identifier cannot be reversed to recover your IP address. We use it to
-            enforce usage quotas, personalize your feed, and prevent abuse. We do
-            <strong>not</strong> store your raw IP address.
+            When you first open Blips News, we generate a <strong>random anonymous identifier</strong>
+            (UUID) and store it securely on your device. This identifier is not derived from your
+            IP address, name, or any other personal information &mdash; it is a randomly generated
+            value with no link back to you. We use it to enforce usage quotas, personalize your feed,
+            and prevent abuse. You can reset this identifier at any time by deleting your data in
+            Settings, which generates a fresh identifier on next launch.
           </p>
 
           <h3>Interaction events</h3>
@@ -86,7 +88,7 @@
             <li>Starting or sending messages in an AI chat session</li>
           </ul>
           <p>
-            Each event is stored with your hashed device identifier, the content item involved,
+            Each event is stored with your anonymous device identifier, the content item involved,
             the event type, and a timestamp. We use this data to learn your topic, source, and
             format preferences so we can show you more relevant content.
           </p>
@@ -95,7 +97,7 @@
           <p>
             When you use the AI chat feature to discuss an article or video, we track the number
             of messages sent and tokens consumed per device to enforce daily usage limits. We store
-            your hashed device identifier, message count, token count, the content item discussed,
+            your anonymous device identifier, message count, token count, the content item discussed,
             and a timestamp.
           </p>
           <p>
@@ -110,7 +112,7 @@
             (e.g., &ldquo;AI&rdquo;, &ldquo;Security&rdquo;), content sources (e.g.,
             &ldquo;TechCrunch&rdquo;), entities (e.g., &ldquo;OpenAI&rdquo;), and content formats
             (articles, videos, reels). These preferences are stored as numeric weights linked to
-            your hashed device identifier. You do not explicitly set these &mdash; they are
+            your anonymous device identifier. You do not explicitly set these &mdash; they are
             inferred from your usage patterns.
           </p>
 
@@ -158,6 +160,11 @@
                 <td>YouTube video IDs only</td>
               </tr>
               <tr>
+                <td><strong>Sentry</strong></td>
+                <td>Crash reporting and performance monitoring</td>
+                <td>Stack traces, device type, OS version, app version, and performance traces. No device identifier, name, or IP address sent.</td>
+              </tr>
+              <tr>
                 <td><strong>RSS feed publishers</strong></td>
                 <td>Fetching article metadata</td>
                 <td>Standard HTTP requests to public RSS feeds (no user data)</td>
@@ -180,9 +187,9 @@
           <p>We retain data for the following periods:</p>
           <ul>
             <li><strong>AI chat usage records:</strong> 90 days</li>
-            <li><strong>Interaction events:</strong> 90 days</li>
+            <li><strong>Interaction events:</strong> 30 days</li>
             <li><strong>User preferences:</strong> until you request deletion</li>
-            <li><strong>Content items:</strong> managed on a rolling 45&#8209;day window</li>
+            <li><strong>Content items:</strong> 90 days (editorial and manually curated items are retained longer)</li>
             <li><strong>Cache data (Redis):</strong> minutes to hours (ephemeral)</li>
           </ul>
           <p>
@@ -209,7 +216,7 @@
           <p>
             All data in transit between the app and our servers is encrypted using HTTPS/TLS.
             Our API is protected by rate limiting, admin authentication, and CORS restrictions.
-            Device identifiers are hashed using SHA&#8209;256 before storage.
+            Device identifiers are randomly generated UUIDs that contain no personal information.
           </p>
 
           <h2>Your rights</h2>

@@ -24,8 +24,8 @@ Before you point your domain here:
 
 This repo currently uses:
 
-- Domain: `https://husniconsulting.ca`
-- Support email: `info@husniconsulting.ca`
+- Domain: `https://blips.tech`
+- Support email: `support@blips.tech`
 - Owner: Husni Consulting Inc.
 
 ## App screenshot

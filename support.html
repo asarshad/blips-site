@@ -3,102 +3,209 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0F172A" />
+    <meta name="theme-color" content="#f7f3ea" />
+
+    <title>Support | Blips News</title>
+    <meta name="description" content="Support and contact information for Blips News." />
+
+    <link rel="canonical" href="https://blips.tech/support.html" />
+    <link rel="preload" href="./assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" href="./assets/app-icon.png" type="image/png" />
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="./assets/app-icon.png" />
 
-    <title>Support — Blips News</title>
-    <meta name="description" content="Support and contact information for Blips News." />
+    <meta property="og:title" content="Support | Blips News" />
+    <meta property="og:description" content="Support, privacy requests, and accessibility contact information for Blips News." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:site_name" content="Blips News" />
+    <meta property="og:url" content="https://blips.tech/support.html" />
+    <meta property="og:image" content="https://blips.tech/assets/app-mark.png" />
+    <meta property="og:image:alt" content="Blips News logo mark" />
 
-    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
   </head>
-  <body>
+  <body class="page-support">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="header" role="banner">
+    <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="Blips News home">
-          <img class="logo" src="./assets/app-icon.png" alt="" width="40" height="40" style="border-radius:10px" />
-          <span class="brand-title">Blips News</span>
+          <img class="brand__mark" src="./assets/app-icon.png" alt="" width="48" height="48" />
+          <span class="brand__copy">
+            <span class="brand__eyebrow">Blips mobile app</span>
+            <span class="brand__name">Blips News</span>
+          </span>
         </a>
-        <nav class="nav" aria-label="Primary">
-          <a href="./index.html">Home</a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+          <span>Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary" data-nav>
+          <a href="./index.html#product">Product</a>
+          <a href="./index.html#experience">Experience</a>
+          <a href="./index.html#screens">Screens</a>
           <a href="./privacy.html">Privacy</a>
           <a href="./terms.html">Terms</a>
+          <a class="button button--solid button--nav" href="./support.html" aria-current="page">Support</a>
         </nav>
       </div>
     </header>
 
-    <main id="main" class="container" role="main">
-      <section class="section" aria-labelledby="title">
-        <div class="card prose">
-          <h1 id="title">Support</h1>
-          <p>
-            This page applies to the Blips News mobile app and the public website. For help with
-            the app, privacy requests, accessibility issues, compliance questions, or to report a
-            bug, email
-            <a href="mailto:support@blips.tech">support@blips.tech</a>.
-          </p>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-hero__shell">
+            <div class="page-hero__inner">
+              <div>
+                <span class="eyebrow">Support</span>
+                <h1>Help, privacy requests, accessibility issues, and bug reports in one place.</h1>
+                <p>
+                  This page applies to the Blips News mobile app and the public website. Email is
+                  the fastest way to reach the team.
+                </p>
+              </div>
 
-          <h2>What to include</h2>
-          <ul>
-            <li>Device model and OS version</li>
-            <li>App version</li>
-            <li>What you expected vs. what happened</li>
-            <li>Screenshots or screen recordings (if available)</li>
-          </ul>
+              <div class="meta-grid">
+                <div class="meta-card">
+                  <span class="meta-card__label">Support email</span>
+                  <a href="mailto:support@blips.tech">support@blips.tech</a>
+                </div>
+                <div class="meta-card">
+                  <span class="meta-card__label">Access</span>
+                  <strong>Public page, no login required</strong>
+                </div>
+                <div class="meta-card">
+                  <span class="meta-card__label">Also available</span>
+                  <strong>Privacy policy and terms of service</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <h2>Privacy requests</h2>
-          <p>
-            To request data access or deletion, email <a href="mailto:support@blips.tech">support@blips.tech</a>
-            or use the in-app <strong>Delete My Data</strong> option in Settings.
-          </p>
+      <section class="section">
+        <div class="container">
+          <div class="support-grid">
+            <article class="support-card support-card--highlight">
+              <span class="kicker kicker--inverted">Contact</span>
+              <h2>Email support@blips.tech</h2>
+              <p>
+                Use this address for app support, privacy requests, accessibility feedback,
+                compliance questions, or to report a bug in the mobile app or public site.
+              </p>
+              <div class="inline-actions">
+                <a class="button button--ghost-light" href="mailto:support@blips.tech">Open email</a>
+                <a class="button button--ghost-light" href="./privacy.html">Privacy policy</a>
+              </div>
+            </article>
 
-          <h2>Policy links</h2>
-          <p>
-            Public policy pages for Blips News are available without login:
-            <a href="./privacy.html">Privacy Policy</a> and
-            <a href="./terms.html">Terms of Service</a>.
-          </p>
+            <article class="support-card">
+              <h2>What to include</h2>
+              <p>Sending a little context up front makes support easier to resolve.</p>
+              <ul class="support-list">
+                <li>Device model and OS version</li>
+                <li>App version</li>
+                <li>What you expected versus what happened</li>
+                <li>Screenshots or screen recordings, if available</li>
+              </ul>
+            </article>
 
-          <h2>Accessibility</h2>
-          <p>
-            If you encounter accessibility barriers in the app or on this website, please email us with
-            details so we can improve.
-          </p>
+            <article class="support-card">
+              <h2>Privacy requests</h2>
+              <p>
+                To request data access or deletion, email
+                <a href="mailto:support@blips.tech">support@blips.tech</a> or use the in-app
+                <strong>Delete My Data</strong> option in Settings.
+              </p>
+            </article>
 
-          <hr />
-          <p class="muted">
-            Quick links: <a href="./privacy.html">Privacy Policy</a> • <a href="./terms.html">Terms</a> •
-            <a href="./index.html">Home</a>
-          </p>
+            <article class="support-card">
+              <h2>Accessibility</h2>
+              <p>
+                If you encounter accessibility barriers in the app or on this website, please email
+                details so we can improve the experience.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="page-section-head">
+            <span class="kicker">Policy links</span>
+            <h2>Public policy pages stay available without login.</h2>
+            <p>
+              Use these links if you need product policy details for review, compliance, or support.
+            </p>
+          </div>
+
+          <div class="policy-grid">
+            <a class="policy-card" href="./privacy.html">
+              <span class="policy-card__index">01 Privacy</span>
+              <h3>Privacy policy</h3>
+              <p>Data collection, third-party services, retention windows, and deletion requests.</p>
+              <span class="policy-card__link">Open page</span>
+            </a>
+
+            <a class="policy-card" href="./terms.html">
+              <span class="policy-card__index">02 Terms</span>
+              <h3>Terms of service</h3>
+              <p>Usage rules, third-party content notes, disclaimers, and governing law.</p>
+              <span class="policy-card__link">Open page</span>
+            </a>
+
+            <a class="policy-card" href="./index.html">
+              <span class="policy-card__index">03 Home</span>
+              <h3>Product overview</h3>
+              <p>See the public landing page and current product overview for Blips News.</p>
+              <span class="policy-card__link">Open page</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <img src="./assets/app-icon.png" alt="" width="32" height="32" style="border-radius:8px" />
-          <span>Blips News</span>
-        </div>
-        <div class="footer-links">
-          <a href="./index.html">Home</a>
-          <a href="./privacy.html">Privacy</a>
-          <a href="./terms.html">Terms</a>
-          <a href="mailto:support@blips.tech">Email</a>
-        </div>
-        <div class="footer-copy">
-          &copy; <span id="year">2025</span> Husni Consulting Inc.
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-shell">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <a class="brand" href="./index.html" aria-label="Blips News home">
+                <img class="brand__mark" src="./assets/app-icon.png" alt="" width="48" height="48" />
+                <span class="brand__copy">
+                  <span class="brand__eyebrow">Public product site</span>
+                  <span class="brand__name">Blips News</span>
+                </span>
+              </a>
+              <p>
+                Static marketing and policy site for the Blips News mobile app, operated by Husni
+                Consulting Inc.
+              </p>
+            </div>
+
+            <nav class="footer-links" aria-label="Footer">
+              <a href="./index.html#product">Product</a>
+              <a href="./index.html#experience">Experience</a>
+              <a href="./index.html#screens">Screens</a>
+              <a href="./privacy.html">Privacy</a>
+              <a href="./terms.html">Terms</a>
+              <a href="./support.html">Support</a>
+            </nav>
+          </div>
+
+          <div class="footer-meta">
+            <span>&copy; <span data-year>2026</span> Husni Consulting Inc.</span>
+            <a class="contact-link" href="mailto:support@blips.tech">support@blips.tech</a>
+          </div>
         </div>
       </div>
     </footer>
-    <script>
-      (function () {
-        var el = document.getElementById('year');
-        if (el) el.textContent = String(new Date().getFullYear());
-      })();
-    </script>
   </body>
 </html>

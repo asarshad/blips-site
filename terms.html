@@ -3,203 +3,288 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0F172A" />
+    <meta name="theme-color" content="#f7f3ea" />
+
+    <title>Terms of Service | Blips News</title>
+    <meta
+      name="description"
+      content="Terms of Service for the Blips News mobile app and public website."
+    />
+
+    <link rel="canonical" href="https://blips.tech/terms.html" />
+    <link rel="preload" href="./assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" href="./assets/app-icon.png" type="image/png" />
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="./assets/app-icon.png" />
 
-    <title>Terms of Service — Blips News</title>
-    <meta name="description" content="Terms of Service for the Blips News app and website." />
+    <meta property="og:title" content="Terms of Service | Blips News" />
+    <meta property="og:description" content="Terms governing the Blips News mobile app and public website." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:site_name" content="Blips News" />
+    <meta property="og:url" content="https://blips.tech/terms.html" />
+    <meta property="og:image" content="https://blips.tech/assets/app-mark.png" />
+    <meta property="og:image:alt" content="Blips News logo mark" />
 
-    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
   </head>
-  <body>
+  <body class="page-legal">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="header" role="banner">
+    <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="Blips News home">
-          <img class="logo" src="./assets/app-icon.png" alt="" width="40" height="40" style="border-radius:10px" />
-          <span class="brand-title">Blips News</span>
+          <img class="brand__mark" src="./assets/app-icon.png" alt="" width="48" height="48" />
+          <span class="brand__copy">
+            <span class="brand__eyebrow">Blips mobile app</span>
+            <span class="brand__name">Blips News</span>
+          </span>
         </a>
-        <nav class="nav" aria-label="Primary">
-          <a href="./index.html">Home</a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+          <span>Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary" data-nav>
+          <a href="./index.html#product">Product</a>
+          <a href="./index.html#experience">Experience</a>
+          <a href="./index.html#screens">Screens</a>
           <a href="./privacy.html">Privacy</a>
-          <a href="./support.html">Support</a>
+          <a href="./terms.html" aria-current="page">Terms</a>
+          <a class="button button--solid button--nav" href="./support.html">Support</a>
         </nav>
       </div>
     </header>
 
-    <main id="main" class="container" role="main">
-      <section class="section" aria-labelledby="title">
-        <div class="card prose">
-          <h1 id="title">Terms of Service</h1>
-          <p class="muted">Last updated: <strong>March 24, 2026</strong></p>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-hero__shell">
+            <div class="page-hero__inner">
+              <div>
+                <span class="eyebrow">Terms of service</span>
+                <h1>The rules, limits, and third-party content notes for using Blips.</h1>
+                <p>
+                  These terms apply to the Blips News mobile app and this public website operated by
+                  Husni Consulting Inc.
+                </p>
+              </div>
 
-          <p>
-            These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the Blips News mobile
-            application and this website (collectively, the &ldquo;Service&rdquo;). Blips News is
-            operated by <strong>Husni Consulting Inc.</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;,
-            &ldquo;our&rdquo;). By using the Service, you agree to these Terms. If you do not
-            agree, please do not use the Service.
-          </p>
+              <div class="meta-grid">
+                <div class="meta-card">
+                  <span class="meta-card__label">Last updated</span>
+                  <strong>March 24, 2026</strong>
+                </div>
+                <div class="meta-card">
+                  <span class="meta-card__label">Operator</span>
+                  <strong>Husni Consulting Inc.</strong>
+                </div>
+                <div class="meta-card">
+                  <span class="meta-card__label">Contact</span>
+                  <a href="mailto:support@blips.tech">support@blips.tech</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <h2>Eligibility</h2>
-          <p>
-            You must be at least <strong>13 years old</strong> to use Blips News. By using the Service,
-            you represent that you meet this age requirement. If you are under the age of majority
-            in your jurisdiction, you confirm that a parent or guardian has reviewed and agreed to
-            these Terms on your behalf.
-          </p>
+      <section class="section">
+        <div class="container legal-layout">
+          <aside class="legal-sticky">
+            <h2>On this page</h2>
+            <nav class="legal-nav" aria-label="Terms sections">
+              <a href="#eligibility">Eligibility</a>
+              <a href="#service-description">Service description</a>
+              <a href="#third-party-content">Third-party content</a>
+              <a href="#ai-generated-content">AI-generated content</a>
+              <a href="#acceptable-use">Acceptable use</a>
+              <a href="#intellectual-property">Intellectual property</a>
+              <a href="#privacy">Privacy</a>
+              <a href="#disclaimer-of-warranties">Disclaimer of warranties</a>
+              <a href="#limitation-of-liability">Limitation of liability</a>
+              <a href="#indemnification">Indemnification</a>
+              <a href="#modifications-to-the-service">Modifications to the service</a>
+              <a href="#changes-to-these-terms">Changes to these terms</a>
+              <a href="#governing-law">Governing law</a>
+              <a href="#contact">Contact</a>
+            </nav>
+            <div class="legal-note">
+              Questions about these terms can be sent to
+              <a href="mailto:support@blips.tech">support@blips.tech</a>.
+            </div>
+          </aside>
 
-          <h2>Service description</h2>
-          <p>
-            Blips News is a news feed application that aggregates links and metadata from
-            third&#8209;party sources (including news sites and YouTube channels), may display
-            embedded YouTube playback and ad placements in some app experiences, and provides
-            AI&#8209;generated summaries and an AI chat feature to help you understand and discuss
-            the content.
-          </p>
+          <article class="legal-card prose">
+            <div class="callout">
+              <p>
+                Blips News aggregates articles, videos, and reels from third-party sources and adds
+                AI-generated summaries and chat. These terms explain the boundaries around that
+                service and your use of it.
+              </p>
+            </div>
 
-          <h2>Third&#8209;party content</h2>
-          <ul>
-            <li>All articles, videos, and reels displayed in Blips News are owned by their respective
-              publishers and are subject to their terms and copyright.</li>
-            <li>Blips News provides links, metadata, and summaries &mdash; it does not claim ownership
-              of third&#8209;party content.</li>
-            <li>Some videos and reels are played through embedded YouTube players. Your use of
-              embedded YouTube content may also be subject to YouTube&rsquo;s terms, privacy policy,
-              and community rules.</li>
-            <li>We are not responsible for the accuracy, availability, or legality of
-              third&#8209;party content.</li>
-            <li>When you open an external link, the third party&rsquo;s terms and privacy policy
-              apply.</li>
-          </ul>
+            <p>
+              These Terms of Service ("Terms") govern your use of the Blips News mobile application
+              and this website (collectively, the "Service"). Blips News is operated by
+              <strong>Husni Consulting Inc.</strong> ("we", "us", "our"). By using the Service, you
+              agree to these Terms. If you do not agree, please do not use the Service.
+            </p>
 
-          <h2>AI&#8209;generated content</h2>
-          <p>
-            Blips News uses artificial intelligence (powered by Mistral AI and OpenAI) to generate
-            article summaries, conversation starters, and chat responses. You acknowledge that:
-          </p>
-          <ul>
-            <li>AI&#8209;generated summaries and responses <strong>may contain inaccuracies,
-              omissions, or errors</strong>. They are provided for informational convenience
-              only.</li>
-            <li>AI output should not be relied upon as a substitute for reading the original
-              source material.</li>
-            <li>Chat conversations are processed by third&#8209;party AI providers. Do not share
-              sensitive, confidential, or personally identifiable information in chat messages.</li>
-            <li>We do not guarantee the availability, accuracy, or completeness of AI features.</li>
-          </ul>
+            <h2 id="eligibility">Eligibility</h2>
+            <p>
+              You must be at least <strong>13 years old</strong> to use Blips News. By using the Service,
+              you represent that you meet this age requirement. If you are under the age of majority
+              in your jurisdiction, you confirm that a parent or guardian has reviewed and agreed to
+              these Terms on your behalf.
+            </p>
 
-          <h2>Acceptable use</h2>
-          <p>You agree not to:</p>
-          <ul>
-            <li>Use the Service for any unlawful purpose or in violation of any applicable laws.</li>
-            <li>Attempt to disrupt, overload, or interfere with the Service or its
-              infrastructure.</li>
-            <li>Circumvent rate limits, authentication mechanisms, or other security measures.</li>
-            <li>Scrape, copy, or redistribute content from the Service in violation of
-              third&#8209;party rights.</li>
-            <li>Use automated tools (bots, scrapers) to access the Service beyond normal app
-              usage.</li>
-            <li>Reverse&#8209;engineer, decompile, or attempt to extract the source code of the
-              Service.</li>
-          </ul>
-          <p>
-            We reserve the right to suspend or terminate access for users who violate these
-            Terms.
-          </p>
+            <h2 id="service-description">Service description</h2>
+            <p>
+              Blips News is a news feed application that aggregates links and metadata from
+              third-party sources (including news sites and YouTube channels), may display
+              embedded YouTube playback and ad placements in some app experiences, and provides
+              AI-generated summaries and an AI chat feature to help you understand and discuss
+              the content.
+            </p>
 
-          <h2>Intellectual property</h2>
-          <p>
-            The Blips News app, its design, code, and branding are the property of Husni Consulting
-            Inc. Third&#8209;party content remains the property of its respective owners. Nothing
-            in these Terms grants you any rights to our intellectual property beyond the limited
-            right to use the Service as intended.
-          </p>
+            <h2 id="third-party-content">Third-party content</h2>
+            <ul>
+              <li>All articles, videos, and reels displayed in Blips News are owned by their respective publishers and are subject to their terms and copyright.</li>
+              <li>Blips News provides links, metadata, and summaries. It does not claim ownership of third-party content.</li>
+              <li>Some videos and reels are played through embedded YouTube players. Your use of embedded YouTube content may also be subject to YouTube's terms, privacy policy, and community rules.</li>
+              <li>We are not responsible for the accuracy, availability, or legality of third-party content.</li>
+              <li>When you open an external link, the third party's terms and privacy policy apply.</li>
+            </ul>
 
-          <h2>Privacy</h2>
-          <p>
-            Your use of the Service is also governed by our
-            <a href="./privacy.html">Privacy Policy</a>, which describes the data we collect and
-            how we use it.
-          </p>
+            <h2 id="ai-generated-content">AI-generated content</h2>
+            <p>
+              Blips News uses artificial intelligence (powered by Mistral AI and OpenAI) to generate
+              article summaries, conversation starters, and chat responses. You acknowledge that:
+            </p>
+            <ul>
+              <li>AI-generated summaries and responses <strong>may contain inaccuracies, omissions, or errors</strong>. They are provided for informational convenience only.</li>
+              <li>AI output should not be relied upon as a substitute for reading the original source material.</li>
+              <li>Chat conversations are processed by third-party AI providers. Do not share sensitive, confidential, or personally identifiable information in chat messages.</li>
+              <li>We do not guarantee the availability, accuracy, or completeness of AI features.</li>
+            </ul>
 
-          <h2>Disclaimer of warranties</h2>
-          <p>
-            The Service is provided <strong>&ldquo;as is&rdquo;</strong> and
-            <strong>&ldquo;as available&rdquo;</strong> without warranties of any kind, express or
-            implied, including but not limited to warranties of merchantability, fitness for a
-            particular purpose, or non&#8209;infringement. We do not warrant that the Service will
-            be uninterrupted, error&#8209;free, or secure.
-          </p>
+            <h2 id="acceptable-use">Acceptable use</h2>
+            <p>You agree not to:</p>
+            <ul>
+              <li>Use the Service for any unlawful purpose or in violation of any applicable laws.</li>
+              <li>Attempt to disrupt, overload, or interfere with the Service or its infrastructure.</li>
+              <li>Circumvent rate limits, authentication mechanisms, or other security measures.</li>
+              <li>Scrape, copy, or redistribute content from the Service in violation of third-party rights.</li>
+              <li>Use automated tools (bots, scrapers) to access the Service beyond normal app usage.</li>
+              <li>Reverse-engineer, decompile, or attempt to extract the source code of the Service.</li>
+            </ul>
+            <p>We reserve the right to suspend or terminate access for users who violate these Terms.</p>
 
-          <h2>Limitation of liability</h2>
-          <p>
-            To the maximum extent permitted by applicable law, Husni Consulting Inc. and its
-            officers, directors, employees, and agents shall not be liable for any indirect,
-            incidental, special, consequential, or punitive damages, or any loss of data, revenue,
-            or profits, arising out of or related to your use of or inability to use the Service.
-          </p>
+            <h2 id="intellectual-property">Intellectual property</h2>
+            <p>
+              The Blips News app, its design, code, and branding are the property of Husni Consulting
+              Inc. Third-party content remains the property of its respective owners. Nothing in these
+              Terms grants you any rights to our intellectual property beyond the limited right to use
+              the Service as intended.
+            </p>
 
-          <h2>Indemnification</h2>
-          <p>
-            You agree to indemnify and hold harmless Husni Consulting Inc. from any claims,
-            damages, losses, or expenses (including reasonable legal fees) arising out of your use
-            of the Service or violation of these Terms.
-          </p>
+            <h2 id="privacy">Privacy</h2>
+            <p>
+              Your use of the Service is also governed by our
+              <a href="./privacy.html">Privacy Policy</a>, which describes the data we collect and
+              how we use it.
+            </p>
 
-          <h2>Modifications to the Service</h2>
-          <p>
-            We may modify, suspend, or discontinue any part of the Service at any time without
-            prior notice. We are not liable to you or any third party for any such changes.
-          </p>
+            <h2 id="disclaimer-of-warranties">Disclaimer of warranties</h2>
+            <p>
+              The Service is provided <strong>"as is"</strong> and <strong>"as available"</strong>
+              without warranties of any kind, express or implied, including but not limited to
+              warranties of merchantability, fitness for a particular purpose, or non-infringement.
+              We do not warrant that the Service will be uninterrupted, error-free, or secure.
+            </p>
 
-          <h2>Changes to these Terms</h2>
-          <p>
-            We may update these Terms from time to time. We will post the revised Terms on this
-            page with an updated &ldquo;Last updated&rdquo; date. Continued use of the Service
-            after changes constitutes acceptance of the revised Terms.
-          </p>
+            <h2 id="limitation-of-liability">Limitation of liability</h2>
+            <p>
+              To the maximum extent permitted by applicable law, Husni Consulting Inc. and its
+              officers, directors, employees, and agents shall not be liable for any indirect,
+              incidental, special, consequential, or punitive damages, or any loss of data, revenue,
+              or profits, arising out of or related to your use of or inability to use the Service.
+            </p>
 
-          <h2>Governing law</h2>
-          <p>
-            These Terms are governed by and construed in accordance with the laws of the Province
-            of Ontario, Canada, without regard to its conflict of law principles.
-          </p>
+            <h2 id="indemnification">Indemnification</h2>
+            <p>
+              You agree to indemnify and hold harmless Husni Consulting Inc. from any claims,
+              damages, losses, or expenses (including reasonable legal fees) arising out of your use
+              of the Service or violation of these Terms.
+            </p>
 
-          <h2>Contact</h2>
-          <p>
-            Questions about these Terms? Contact
-            <a href="mailto:support@blips.tech">support@blips.tech</a>.
-          </p>
+            <h2 id="modifications-to-the-service">Modifications to the service</h2>
+            <p>
+              We may modify, suspend, or discontinue any part of the Service at any time without
+              prior notice. We are not liable to you or any third party for any such changes.
+            </p>
+
+            <h2 id="changes-to-these-terms">Changes to these terms</h2>
+            <p>
+              We may update these Terms from time to time. We will post the revised Terms on this
+              page with an updated "Last updated" date. Continued use of the Service after changes
+              constitutes acceptance of the revised Terms.
+            </p>
+
+            <h2 id="governing-law">Governing law</h2>
+            <p>
+              These Terms are governed by and construed in accordance with the laws of the Province
+              of Ontario, Canada, without regard to its conflict of law principles.
+            </p>
+
+            <h2 id="contact">Contact</h2>
+            <p>
+              Questions about these Terms? Contact
+              <a href="mailto:support@blips.tech">support@blips.tech</a>.
+            </p>
+          </article>
         </div>
       </section>
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <img src="./assets/app-icon.png" alt="" width="32" height="32" style="border-radius:8px" />
-          <span>Blips News</span>
-        </div>
-        <div class="footer-links">
-          <a href="./index.html">Home</a>
-          <a href="./privacy.html">Privacy</a>
-          <a href="./support.html">Support</a>
-          <a href="mailto:support@blips.tech">Email</a>
-        </div>
-        <div class="footer-copy">
-          &copy; <span id="year">2025</span> Husni Consulting Inc.
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-shell">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <a class="brand" href="./index.html" aria-label="Blips News home">
+                <img class="brand__mark" src="./assets/app-icon.png" alt="" width="48" height="48" />
+                <span class="brand__copy">
+                  <span class="brand__eyebrow">Public product site</span>
+                  <span class="brand__name">Blips News</span>
+                </span>
+              </a>
+              <p>
+                Static marketing and policy site for the Blips News mobile app, operated by Husni
+                Consulting Inc.
+              </p>
+            </div>
+
+            <nav class="footer-links" aria-label="Footer">
+              <a href="./index.html#product">Product</a>
+              <a href="./index.html#experience">Experience</a>
+              <a href="./index.html#screens">Screens</a>
+              <a href="./privacy.html">Privacy</a>
+              <a href="./terms.html">Terms</a>
+              <a href="./support.html">Support</a>
+            </nav>
+          </div>
+
+          <div class="footer-meta">
+            <span>&copy; <span data-year>2026</span> Husni Consulting Inc.</span>
+            <a class="contact-link" href="mailto:support@blips.tech">support@blips.tech</a>
+          </div>
         </div>
       </div>
     </footer>
-    <script>
-      (function () {
-        var el = document.getElementById('year');
-        if (el) el.textContent = String(new Date().getFullYear());
-      })();
-    </script>
   </body>
 </html>

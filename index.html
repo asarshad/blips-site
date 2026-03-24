@@ -12,8 +12,8 @@
     />
 
     <link rel="canonical" href="https://blips.tech/" />
-    <link rel="preload" href="./assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="./assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" href="./assets/app-icon.png" type="image/png" />
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
@@ -66,10 +66,15 @@
     <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="Blips News home">
-          <img class="brand__mark" src="./assets/app-icon.png" alt="" width="48" height="48" />
+          <span class="brand__mark-shell">
+            <img class="brand__mark" src="./assets/app-icon.png" alt="" width="48" height="48" />
+          </span>
           <span class="brand__copy">
-            <span class="brand__eyebrow">Blips mobile app</span>
-            <span class="brand__name">Blips News</span>
+            <span class="brand__eyebrow">Signal-first briefings</span>
+            <span class="brand__name-row">
+              <span class="brand__name">Blips News</span>
+              <span class="brand__microtag">Read &middot; Watch &middot; Ask</span>
+            </span>
           </span>
         </a>
 
@@ -458,10 +463,14 @@
           <div class="footer-top">
             <div class="footer-brand">
               <a class="brand" href="./index.html" aria-label="Blips News home">
-                <img class="brand__mark" src="./assets/app-icon.png" alt="" width="48" height="48" />
+                <span class="brand__mark-shell">
+                  <img class="brand__mark" src="./assets/app-icon.png" alt="" width="48" height="48" />
+                </span>
                 <span class="brand__copy">
-                  <span class="brand__eyebrow">Public product site</span>
-                  <span class="brand__name">Blips News</span>
+                  <span class="brand__eyebrow">Product, privacy, support</span>
+                  <span class="brand__name-row">
+                    <span class="brand__name">Blips News</span>
+                  </span>
                 </span>
               </a>
               <p>

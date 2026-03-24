@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Instrument Sans";
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
-  src: url("./assets/fonts/instrument-sans-latin.woff2") format("woff2");
+  src: url("./assets/fonts/manrope-latin.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Space Grotesk";
+  font-family: "Sora";
   font-style: normal;
-  font-weight: 500 700;
+  font-weight: 400 800;
   font-display: swap;
-  src: url("./assets/fonts/space-grotesk-latin.woff2") format("woff2");
+  src: url("./assets/fonts/sora-latin.woff2") format("woff2");
 }
 
 :root {
@@ -56,8 +56,8 @@
   --section-tight: clamp(3rem, 5vw, 4.5rem);
   --header-height: 84px;
 
-  --font-body: "Instrument Sans", "Avenir Next", "Segoe UI", sans-serif;
-  --font-display: "Space Grotesk", "Trebuchet MS", sans-serif;
+  --font-body: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: "Sora", "Avenir Next", "Segoe UI", sans-serif;
 }
 
 *,
@@ -284,42 +284,106 @@ main section[id],
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.9rem;
+  min-width: 0;
   color: var(--ink);
   text-decoration: none;
+}
+
+.site-header .brand {
+  padding: 0.32rem 0.95rem 0.32rem 0.34rem;
+  border: 1px solid rgba(12, 24, 33, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.56);
+  box-shadow: 0 16px 36px rgba(12, 24, 33, 0.06);
+  backdrop-filter: blur(14px);
 }
 
 .brand:hover {
   text-decoration: none;
 }
 
+.brand__mark-shell {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  padding: 5px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 14px 28px rgba(12, 24, 33, 0.1);
+}
+
 .brand__mark {
-  width: 48px;
-  height: 48px;
-  padding: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: var(--shadow-card);
+  background: #ffffff;
 }
 
 .brand__copy {
   display: grid;
-  gap: 0.1rem;
+  gap: 0.28rem;
+  min-width: 0;
 }
 
 .brand__eyebrow {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.24rem 0.58rem;
+  border-radius: 999px;
+  background: rgba(103, 217, 255, 0.18);
+  color: var(--accent-strong);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.brand__name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
 .brand__name {
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1.16rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.brand__microtag {
+  padding: 0.32rem 0.62rem;
+  border: 1px solid rgba(12, 24, 33, 0.08);
+  border-radius: 999px;
+  background: rgba(12, 24, 33, 0.04);
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.footer-brand .brand__mark-shell {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
+}
+
+.footer-brand .brand__eyebrow {
+  background: rgba(12, 24, 33, 0.05);
+  color: var(--ink-soft);
+}
+
+.footer-brand .brand__microtag {
+  display: none;
 }
 
 .nav-toggle {
@@ -1517,6 +1581,20 @@ main section[id],
     --header-height: 76px;
   }
 
+  .site-header .brand {
+    padding: 0.24rem 0.72rem 0.24rem 0.24rem;
+  }
+
+  .brand__mark-shell {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+  }
+
+  .brand__microtag {
+    display: none;
+  }
+
   .nav-toggle {
     display: inline-flex;
   }
@@ -1637,6 +1715,14 @@ main section[id],
 }
 
 @media (max-width: 640px) {
+  .site-header .brand {
+    max-width: calc(100% - 4.35rem);
+  }
+
+  .brand__eyebrow {
+    font-size: 0.62rem;
+  }
+
   .hero-actions,
   .inline-actions {
     flex-direction: column;

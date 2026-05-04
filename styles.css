@@ -749,7 +749,7 @@ main section[id],
 
 .section {
   position: relative;
-  padding: var(--section-space) 0;
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0 var(--section-space);
 }
 
 .section-head {

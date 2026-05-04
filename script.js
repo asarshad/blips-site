@@ -49,4 +49,34 @@
     syncHeaderState();
     window.addEventListener('scroll', syncHeaderState, { passive: true });
   }
+
+  // Highlight the nav link for whichever section the user is currently reading.
+  var sections = document.querySelectorAll('main section[id]');
+  var navLinks = nav ? nav.querySelectorAll('a[href*="#"]') : [];
+  if (sections.length && navLinks.length && 'IntersectionObserver' in window) {
+    var setActive = function (id) {
+      navLinks.forEach(function (link) {
+        if (link.hash === '#' + id) {
+          link.setAttribute('aria-current', 'page');
+        } else if (link.getAttribute('aria-current') === 'page') {
+          link.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+    );
+
+    sections.forEach(function (section) {
+      observer.observe(section);
+    });
+  }
 })();

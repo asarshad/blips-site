@@ -875,6 +875,42 @@ main section[id],
   width: 100%;
 }
 
+.feature-graphic--phone {
+  padding: 1.5rem;
+  min-height: 22rem;
+}
+
+.feature-graphic--phone img {
+  width: auto;
+  max-width: 60%;
+  max-height: 28rem;
+  border-radius: 1.4rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.appstore-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.appstore-badge:hover,
+.appstore-badge:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(8, 20, 28, 0.18);
+}
+
+.appstore-badge img {
+  display: block;
+  width: auto;
+  height: 54px;
+}
+
+.appstore-badge--light img {
+  height: 60px;
+}
+
 .feature-pills {
   display: flex;
   flex-wrap: wrap;

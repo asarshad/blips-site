@@ -28,10 +28,11 @@ This repo currently uses:
 - Support email: `support@blips.tech`
 - Owner: Husni Consulting Inc.
 
-## App screenshot
+## App screenshots and App Store badge
 
-The homepage includes an illustrated app preview at `assets/app-mock.svg`.
-If you provide real screenshots, we can replace it with a PNG/WebP and update the `<img>` tag.
+The homepage uses real app screenshots at `assets/screenshot-{feed,videos,reels}.png`
+and the official App Store badge at `assets/appstore-badge.svg`. To refresh, drop
+new files at the same paths (1170×2532 for screenshots).
 
 ## Run locally
 

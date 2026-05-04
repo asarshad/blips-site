@@ -466,6 +466,11 @@ main section[id],
   margin-left: 0.2rem;
 }
 
+.site-nav .button--solid,
+.site-nav .button--accent {
+  color: var(--ink-inverse);
+}
+
 .site-nav .button[aria-current="page"] {
   background: var(--ink);
   color: var(--ink-inverse);
